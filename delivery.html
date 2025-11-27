@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Information - Gusto Grove & Dine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/Aura2.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <a href="Bentler.html" class="logo">Gusto Grove & Dine</a>
+        <nav class="navbar">
+            <a href="Bentler.html" class="nav-link">Home</a>
+            <a href="payment.html" class="nav-link">Payment</a>
+        </nav>
+    </header>
+
+    <!-- Delivery Section -->
+    <section class="Order" id="Order" style="margin-top: 80px;">
+        <div class="heading">
+            <span>Delivery Information</span>
+            <h3>Where should we deliver your order?</h3>
+        </div>
+        <div class="container_2">
+            <!-- Order Summary -->
+            <div class="order-summary" style="background: var(--second-bg-color); padding: 2rem; border-radius: 10px; margin-bottom: 3rem;">
+                <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">Your Order</h3>
+                <div id="deliveryOrderItems"></div>
+                <div class="order-total" style="border-top: 2px solid var(--primary-color); padding-top: 1rem; margin-top: 1rem;">
+                    <h3 style="font-size: 2.2rem; color: var(--dark-color);">Total: R<span id="deliveryTotal">0</span></h3>
+                </div>
+            </div>
+
+            <form id="deliveryForm">
+                <div class="row">
+                    <div class="column">
+                        <h3 class="title">Delivery Address</h3>
+                        <div class="input-box">
+                            <span>Full Name :</span>
+                            <input type="text" placeholder="Jacob Aiden" id="deliveryName" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Phone Number :</span>
+                            <input type="tel" placeholder="071 234 5678" id="phone" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Email :</span>
+                            <input type="email" placeholder="example@example.com" id="deliveryEmail" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Street Address :</span>
+                            <input type="text" placeholder="123 Main Street" id="streetAddress" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Apartment/Unit :</span>
+                            <input type="text" placeholder="Apartment 4B" id="apartment">
+                        </div>
+                        <div class="flex">
+                            <div class="input-box">
+                                <span>City :</span>
+                                <input type="text" placeholder="Johannesburg" id="deliveryCity" required>
+                            </div>
+                            <div class="input-box">
+                                <span>Province :</span>
+                                <select id="deliveryProvince" required style="width: 100%; padding: 1.2rem; border: 1px solid var(--border-color); border-radius: 5px; font-size: 1.6rem;">
+                                    <option value="">Select Province</option>
+                                    <option value="Gauteng">Gauteng</option>
+                                    <option value="Western Cape">Western Cape</option>
+                                    <option value="KwaZulu-Natal">KwaZulu-Natal</option>
+                                    <option value="Eastern Cape">Eastern Cape</option>
+                                    <option value="Free State">Free State</option>
+                                    <option value="Limpopo">Limpopo</option>
+                                    <option value="Mpumalanga">Mpumalanga</option>
+                                    <option value="North West">North West</option>
+                                    <option value="Northern Cape">Northern Cape</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="input-box">
+                                <span>Postal Code :</span>
+                                <input type="number" placeholder="1865" id="postalCode" required>
+                            </div>
+                            <div class="input-box">
+                                <span>Delivery Time :</span>
+                                <select id="deliveryTime" required style="width: 100%; padding: 1.2rem; border: 1px solid var(--border-color); border-radius: 5px; font-size: 1.6rem;">
+                                    <option value="">Select Time</option>
+                                    <option value="asap">As soon as possible</option>
+                                    <option value="30min">Within 30 minutes</option>
+                                    <option value="1hour">Within 1 hour</option>
+                                    <option value="2hours">Within 2 hours</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <span>Delivery Instructions (Optional) :</span>
+                            <textarea placeholder="e.g., Leave at front door, call when arriving, etc." 
+                                     style="width: 100%; padding: 1.2rem; border: 1px solid var(--border-color); border-radius: 5px; font-size: 1.6rem; resize: vertical; min-height: 100px;"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="column">
+                        <h3 class="title">Delivery Information</h3>
+                        <div class="delivery-info" style="background: var(--second-bg-color); padding: 2rem; border-radius: 10px;">
+                            <div style="text-align: center; margin-bottom: 2rem;">
+                                <i class="fas fa-truck" style="font-size: 4rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                                <h3 style="color: var(--primary-color);">Delivery Service</h3>
+                            </div>
+                            
+                            <div style="margin-bottom: 2rem;">
+                                <h4 style="color: var(--dark-color); margin-bottom: 1rem;">Delivery Areas</h4>
+                                <p style="font-size: 1.4rem; color: var(--light-text); line-height: 1.6;">
+                                    We deliver within a 15km radius of our restaurant. Delivery times may vary based on your location and current order volume.
+                                </p>
+                            </div>
+                            
+                            <div style="margin-bottom: 2rem;">
+                                <h4 style="color: var(--dark-color); margin-bottom: 1rem;">Delivery Fees</h4>
+                                <p style="font-size: 1.4rem; color: var(--light-text); line-height: 1.6;">
+                                    • Within 5km: R25<br>
+                                    • 5km - 10km: R35<br>
+                                    • 10km - 15km: R45<br>
+                                    • Free delivery on orders over R300
+                                </p>
+                            </div>
+                            
+                            <div>
+                                <h4 style="color: var(--dark-color); margin-bottom: 1rem;">Contact Information</h4>
+                                <p style="font-size: 1.4rem; color: var(--light-text); line-height: 1.6;">
+                                    <i class="fas fa-phone" style="color: var(--primary-color);"></i> 011 123 4567<br>
+                                    <i class="fas fa-envelope" style="color: var(--primary-color);"></i> delivery@gustogrove.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="delivery-options" style="margin: 2rem 0;">
+                    <h3 class="title">Delivery Method</h3>
+                    <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                        <label style="display: flex; align-items: center; gap: 1rem; font-size: 1.6rem; cursor: pointer;">
+                            <input type="radio" name="deliveryMethod" value="delivery" checked>
+                            <i class="fas fa-truck" style="color: var(--primary-color);"></i>
+                            Home Delivery
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 1rem; font-size: 1.6rem; cursor: pointer;">
+                            <input type="radio" name="deliveryMethod" value="pickup">
+                            <i class="fas fa-store" style="color: var(--primary-color);"></i>
+                            Pickup at Restaurant
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn" style="width: 100%; padding: 1.5rem; font-size: 2rem;">Proceed to Payment</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Load cart data from localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const orderItems = document.getElementById('deliveryOrderItems');
+            const orderTotal = document.getElementById('deliveryTotal');
+            
+            let total = 0;
+            
+            if (cart.length === 0) {
+                orderItems.innerHTML = '<p style="font-size: 1.6rem; color: var(--light-text);">No items in cart. <a href="index.html" style="color: var(--primary-color);">Go back to menu</a></p>';
+                orderTotal.textContent = '0';
+                return;
+            }
+            
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                const itemElement = document.createElement('div');
+                itemElement.style.cssText = 'display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid var(--border-color);';
+                itemElement.innerHTML = `
+                    <div>
+                        <h4 style="font-size: 1.6rem; margin-bottom: 0.5rem;">${item.name}</h4>
+                        <p style="font-size: 1.4rem; color: var(--light-text);">Qty: ${item.quantity} × R${item.price}</p>
+                    </div>
+                    <div style="font-size: 1.6rem; font-weight: bold; color: var(--primary-color);">
+                        R${itemTotal}
+                    </div>
+                `;
+                orderItems.appendChild(itemElement);
+            });
+            
+            orderTotal.textContent = total;
+            
+            // Form submission
+            document.getElementById('deliveryForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const deliveryData = {
+                    name: document.getElementById('deliveryName').value,
+                    phone: document.getElementById('phone').value,
+                    email: document.getElementById('deliveryEmail').value,
+                    street: document.getElementById('streetAddress').value,
+                    apartment: document.getElementById('apartment').value,
+                    city: document.getElementById('deliveryCity').value,
+                    province: document.getElementById('deliveryProvince').value,
+                    postalCode: document.getElementById('postalCode').value,
+                    deliveryTime: document.getElementById('deliveryTime').value,
+                    deliveryMethod: document.querySelector('input[name="deliveryMethod"]:checked').value
+                };
+                
+                localStorage.setItem('deliveryInfo', JSON.stringify(deliveryData));
+                window.location.href = 'payment.html';
+            });
+        });
+    </script>
+</body>
+</html>

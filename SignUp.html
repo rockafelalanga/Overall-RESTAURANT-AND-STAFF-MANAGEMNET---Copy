@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gusto Grove & Dine - Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/Vero.css">
+</head>
+<body background="/images/background.jpeg">
+    <div class="login-container">
+        <span class="logo">Gusto Grove & Dine</span>
+        <h2>Welcome</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="surname">Surname</label>
+                <input type="text" id="surname" name="surname" placeholder="Enter your Surname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="number" id="phone" name="phone" placeholder="Enter your Phone Number" required>
+            </div>
+            
+
+            <div class="form-group">
+                <label for="UserID">Email</label>
+                <input type="text" id="UserID" name="UserID" placeholder="Enter your Email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <button type="button" class="toggle-password" id="togglePassword">
+                        <i class="far fa-eye"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <button type="submit" class="login-btn">Sign Up</button>
+        </form>
+        
+        <div class="social-login">
+            <p>Or Sign Up with</p>
+            <div class="social-icons">
+                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="google"><i class="fab fa-google"></i></a>
+                <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        
+        <div class="register-link">
+            Already have an account? <a href="Login.html">Login</a>
+        </div>
+        
+        <div id="message"></div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

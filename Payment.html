@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Gusto Grove & Dine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/Aura.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <a href="Bentler.html" class="logo">Gusto Grove & Dine</a>
+        <nav class="navbar">
+            <a href="Bentler.html" class="nav-link">Home</a>
+            <a href="delivery.html" class="nav-link">Delivery</a>
+        </nav>
+    </header>
+
+    <!-- Order Section -->
+    <section class="Order" id="Order" style="margin-top: 80px;">
+        <div class="heading">
+            <span>Payment Details</span>
+            <h3>Complete Your Order</h3>
+        </div>
+        <div class="container_2">
+            <!-- Order Summary -->
+            <div class="order-summary" style="background: var(--second-bg-color); padding: 2rem; border-radius: 10px; margin-bottom: 3rem;">
+                <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">Order Summary</h3>
+                <div id="orderItems"></div>
+                <div class="order-total" style="border-top: 2px solid var(--primary-color); padding-top: 1rem; margin-top: 1rem;">
+                    <h3 style="font-size: 2.2rem; color: var(--dark-color);">Total: R<span id="orderTotal">0</span></h3>
+                </div>
+            </div>
+
+            <form id="paymentForm" action="receipt.html" method="GET">
+                <div class="row">
+                    <div class="column">
+                        <h3 class="title">Billing Address</h3>
+                        <div class="input-box">
+                            <span>Full Name :</span>
+                            <input type="text" placeholder="Jacob Aiden" id="fullName" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Email :</span>
+                            <input type="email" placeholder="example@example.com" id="email" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Address :</span>
+                            <input type="text" placeholder="Room - Street - Location" id="address" required>
+                        </div>
+                        <div class="input-box">
+                            <span>City :</span>
+                            <input type="text" placeholder="Johannesburg" id="city" required>
+                        </div>
+                        <div class="flex">
+                            <div class="input-box">
+                                <span>Province :</span>
+                                <input type="text" placeholder="Gauteng" id="province" required>
+                            </div>
+                            <div class="input-box">
+                                <span>Zip Code :</span>
+                                <input type="number" placeholder="1865" id="zipCode" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h3 class="title">Payment</h3>
+                        <div class="input-box">
+                            <span>Cards Accepted :</span>
+                            <img src="Icon imgs/cards.jpg" alt="Accepted Cards" style="width: 100%; max-width: 300px;">
+                        </div>
+                        <div class="input-box">
+                            <span>Name on Card :</span>
+                            <input type="text" placeholder="Mr Jacob Aiden" id="cardName" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Card Number :</span>
+                            <input type="text" placeholder="1111 2222 3333 4444" id="cardNumber" required maxlength="19">
+                        </div>
+                        <div class="input-box">
+                            <span>Exp. Month :</span>
+                            <select id="expMonth" required style="width: 100%; padding: 1.2rem; border: 1px solid var(--border-color); border-radius: 5px; font-size: 1.6rem;">
+                                <option value="">Select Month</option>
+                                <option value="01">January</option>
+                                <option value="02">February</option>
+                                <option value="03">March</option>
+                                <option value="04">April</option>
+                                <option value="05">May</option>
+                                <option value="06">June</option>
+                                <option value="07">July</option>
+                                <option value="08">August</option>
+                                <option value="09">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                        </div>
+                        <div class="flex">
+                            <div class="input-box">
+                                <span>Exp. Year :</span>
+                                <input type="number" placeholder="2025" id="expYear" required min="2024" max="2030">
+                            </div>
+                            <div class="input-box">
+                                <span>CVV :</span>
+                                <input type="number" placeholder="186" id="cvv" required maxlength="3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn" style="width: 100%; padding: 1.5rem; font-size: 2rem;">Complete Payment</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Load cart data from localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const orderItems = document.getElementById('orderItems');
+            const orderTotal = document.getElementById('orderTotal');
+            
+            let total = 0;
+            
+            if (cart.length === 0) {
+                orderItems.innerHTML = '<p style="font-size: 1.6rem; color: var(--light-text);">No items in cart</p>';
+                orderTotal.textContent = '0';
+                return;
+            }
+            
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                const itemElement = document.createElement('div');
+                itemElement.style.cssText = 'display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid var(--border-color);';
+                itemElement.innerHTML = `
+                    <div>
+                        <h4 style="font-size: 1.6rem; margin-bottom: 0.5rem;">${item.name}</h4>
+                        <p style="font-size: 1.4rem; color: var(--light-text);">Qty: ${item.quantity} × R${item.price}</p>
+                    </div>
+                    <div style="font-size: 1.6rem; font-weight: bold; color: var(--primary-color);">
+                        R${itemTotal}
+                    </div>
+                `;
+                orderItems.appendChild(itemElement);
+            });
+            
+            orderTotal.textContent = total;
+            
+            // Format card number input
+            document.getElementById('cardNumber').addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+                let formattedValue = value.match(/.{1,4}/g)?.join(' ');
+                if (formattedValue) {
+                    e.target.value = formattedValue;
+                }
+            });
+            
+            // Store order data for receipt
+            document.getElementById('paymentForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const orderData = {
+                    items: cart,
+                    total: total,
+                    customer: {
+                        name: document.getElementById('fullName').value,
+                        email: document.getElementById('email').value,
+                        address: document.getElementById('address').value,
+                        city: document.getElementById('city').value,
+                        province: document.getElementById('province').value,
+                        zipCode: document.getElementById('zipCode').value
+                    },
+                    payment: {
+                        cardName: document.getElementById('cardName').value,
+                        cardLastFour: document.getElementById('cardNumber').value.slice(-4)
+                    },
+                    orderNumber: 'GG' + Date.now().toString().slice(-6),
+                    orderDate: new Date().toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    })
+                };
+                
+                localStorage.setItem('currentOrder', JSON.stringify(orderData));
+                localStorage.removeItem('cart'); // Clear cart after order
+                window.location.href = 'receipt.html';
+            });
+        });
+    </script>
+</body>
+</html>

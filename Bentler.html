@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gusto Grove & Dine Restaurant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/Aura.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <a href="#" class="logo">Gusto Grove & Dine</a>
+        <nav class="navbar">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#Top-Menu" class="nav-link">Top Menu</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#Main-Menu" class="nav-link">Main Menu</a>
+            <a href="#Staff" class="nav-link">Staff</a>
+            <a href="#Review" class="nav-link">Review</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide" style="background:url('images/background.jpeg') no-repeat;">
+                    <div class="content">
+                        <span>Outstanding Food</span>
+                        <h3>Gusto Grove and Dine</h3>
+                        <span>Have dinner with us by the Ocean</span>
+                        <a href="#Main-Menu" class="btn">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="image">
+            <img src="images/burg.avif" alt="Restaurant Plate">
+        </div>
+        <div class="content">
+            <h3 class="title">Welcome to our restaurant</h3>
+            <p>The <span>Gusto Grove and Dine</span> also known as the "Mucho Gusto Grove" Restaurant first originated in the year 1994. It is a vintage delicacy restaurant that deals with five star elite dishes with its chefs. It is located near the ocean where it is quiet. This is a global restaurant. It is a full midnight and morning restaurant.</p>
+            <a href="#" class="btn">Read more</a>
+            <div class="icons-container">
+                <div class="icons">
+                    <i class="fas fa-utensils fa-4x" style="color: var(--primary-color);"></i>
+                    <h3>Quality Food</h3>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-glass-cheers fa-4x" style="color: var(--primary-color);"></i>
+                    <h3>Food & Drinks</h3>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-user-chef fa-4x" style="color: var(--primary-color);"></i>
+                    <h3>Expert Chefs</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Menu Section -->
+    <section class="Top-Menu" id="Top-Menu">
+        <div class="heading">
+            <span>Popular dishes</span>
+            <h3>Our top dishes of the month</h3>
+            <h3>They are ranked from 1-5</h3>
+        </div>
+        <div class="swiper food-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide food-slide" data-name="food-1">
+                    <img src="lunch imgs/download3.jpeg" alt="Dish 1">
+                    <h3>Margherita Pizza</h3>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <div class="swiper-slide food-slide" data-name="food-2">
+                    <img src="lunch imgs/download1.jpeg" alt="Dish 2">
+                    <h3>Beef Burger & Chips</h3>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <div class="swiper-slide food-slide" data-name="food-3">
+                    <img src="lunch imgs/Chicken Schnitzel.jpeg" alt="Dish 3">
+                    <h3>Chicken Schnitzel</h3>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <div class="swiper-slide food-slide" data-name="food-4">
+                    <img src="lunch imgs/fish.jpg" alt="Dish 4">
+                    <h3>Fish & Chips</h3>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <div class="swiper-slide food-slide" data-name="food-5">
+                    <img src="lunch imgs/download5.jpeg" alt="Dish 5">
+                    <h3>Greek Salad</h3>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="heading">
+            <span>Our gallery includes allergens</span>
+            <h3>Our untold stories</h3>
+        </div>
+        <div class="gallery-container">
+            <a href="gallery/food1.jpg" class="box">
+                <img src="gallery/food1.jpg" alt="">
+                <div class="icon"><i class="fa-solid fa-plus"></i></div>
+            </a>
+            <a href="gallery/food2.jpg" class="box">
+                <img src="gallery/food2.jpg" alt="">
+                <div class="icon"><i class="fa-solid fa-plus"></i></div>
+            </a>
+            <a href="gallery/food3.jpg" class="box">
+                <img src="gallery/food3.jpg" alt="">
+                <div class="icon"><i class="fa-solid fa-plus"></i></div>
+            </a>
+            <a href="gallery/food4.jpg" class="box">
+                <img src="gallery/food4.jpg" alt="">
+                <div class="icon"><i class="fa-solid fa-plus"></i></div>
+            </a>
+            <a href="gallery/food5.jpg" class="box">
+                <img src="gallery/food5.jpg" alt="">
+                <div class="icon"><i class="fa-solid fa-plus"></i></div>
+            </a>
+            <a href="gallery/food6.jpg" class="box">
+                <img src="gallery/food6.jpg" alt="">
+                <div class="icon"><i class="fa-solid fa-plus"></i></div>
+            </a>
+            <a href="gallery/food7.jpg" class="box">
+                <img src="gallery/food7.jpg" alt="">
+                <div class="icon"><i class="fa-solid fa-plus"></i></div>
+            </a>
+            <a href="gallery/food8.jpg" class="box">
+                <img src="gallery/food8.jpg" alt="">
+                <div class="icon"><i class="fa-solid fa-plus"></i></div>
+            </a>
+            <a href="gallery/food9.jpg" class="box">
+                <img src="gallery/food9.jpg" alt="">
+                <div class="icon"><i class="fa-solid fa-plus"></i></div>
+            </a>
+        </div>
+</section>
+
+    <!-- Main Menu Section -->
+    <section class="Main-Menu" id="Main-Menu">
+        <h1 id="section">Menu</h1>
+        <div id="menu_row">
+            <!-- Breakfast Menu -->
+            <div class="menu_col">
+                <h2>Breakfast</h2>
+                <div class="box">
+                    <div class="Item">
+                        <img src="breakfast imgs/download.jpeg" alt="English Breakfast">
+                    </div>
+                    <div class="item-details">
+                        <h3>English Breakfast</h3>
+                        <div class="Price">R85</div>
+                        <button class="addCart" data-name="English Breakfast" data-price="85">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Item">
+                        <img src="breakfast imgs/download (1).jpeg" alt="Omelette">
+                    </div>
+                    <div class="item-details">
+                        <h3>Omelette with 3 Fillings</h3>
+                        <div class="Price">R70</div>
+                        <button class="addCart" data-name="Omelette with 3 Fillings" data-price="70">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Item">
+                        <img src="breakfast imgs/download (2).jpeg" alt="Pancakes">
+                    </div>
+                    <div class="item-details">
+                        <h3>Pancakes (With a KICK)</h3>
+                        <div class="Price">R55</div>
+                        <button class="addCart" data-name="Pancakes (With a KICK)" data-price="55">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Item">
+                        <img src="breakfast imgs/download (3).jpeg" alt="French Toast">
+                    </div>
+                    <div class="item-details">
+                        <h3>French Toast</h3>
+                        <div class="Price">R65</div>
+                        <button class="addCart" data-name="French Toast" data-price="65">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Item">
+                        <img src="breakfast imgs/download (4).jpeg" alt="Boerewors & Pap">
+                    </div>
+                    <div class="item-details">
+                        <h3>Boerewors & Pap</h3>
+                        <div class="Price">R75</div>
+                        <button class="addCart" data-name="Boerewors & Pap" data-price="75">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Item">
+                        <img src="breakfast imgs/download (5).jpeg" alt="Avocado Toast">
+                    </div>
+                    <div class="item-details">
+                        <h3>Avocado Toast</h3>
+                        <div class="Price">R80</div>
+                        <button class="addCart" data-name="Avocado Toast" data-price="80">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Item">
+                        <img src="breakfast imgs/download (6).jpeg" alt="Muesli Yogurt">
+                    </div>
+                    <div class="item-details">
+                        <h3>Muesli Yogurt & Fresh Fruit</h3>
+                        <div class="Price">R60</div>
+                        <button class="addCart" data-name="Muesli Yogurt & Fresh Fruit" data-price="60">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Item">
+                        <img src="breakfast imgs/download (7).jpeg" alt="Breakfast Wrap">
+                    </div>
+                    <div class="item-details">
+                        <h3>Breakfast Wrap</h3>
+                        <div class="Price">R68</div>
+                        <button class="addCart" data-name="Breakfast Wrap" data-price="68">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lunch Menu -->
+            <div class="menu_col">
+                <h2>Lunch</h2>
+                <div class="box">
+                    <div class="Item">
+                        <img src="lunch imgs/download1.jpeg" alt="Beef Burger">
+                    </div>
+                    <div class="item-details">
+                        <h3>Beef Burger & Chips</h3>
+                        <div class="Price">R145</div>
+                        <button class="addCart" data-name="Beef Burger & Chips" data-price="145">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Item">
+                        <img src="lunch imgs/download2.jpeg" alt="Chicken Schnitzel">
+                    </div>
+                    <div class="item-details">
+                        <h3>Chicken Schnitzel</h3>
+                        <div class="Price">R135</div>
+                        <button class="addCart" data-name="Chicken Schnitzel" data-price="135">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Item">
+                        <img src="lunch imgs/download3.jpeg" alt="Margherita Pizza">
+                    </div>
+                    <div class="item-details">
+                        <h3>Margherita Pizza</h3>
+                        <div class="Price">R120</div>
+                        <button class="addCart" data-name="Margherita Pizza" data-price="120">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Item">
+                        <img src="lunch imgs/download4.jpeg" alt="Fish & Chips">
+                    </div>
+                    <div class="item-details">
+                        <h3>Fish & Chips</h3>
+                        <div class="Price">R110</div>
+                        <button class="addCart" data-name="Fish & Chips" data-price="110">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Item">
+                        <img src="lunch imgs/download5.jpeg" alt="Greek Salad">
+                    </div>
+                    <div class="item-details">
+                        <h3>Greek Salad</h3>
+                        <div class="Price">R95</div>
+                        <button class="addCart" data-name="Greek Salad" data-price="95">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Item">
+                        <img src="lunch imgs/download6.jpeg" alt="Bacon & Avocado Sandwich">
+                    </div>
+                    <div class="item-details">
+                        <h3>Bacon & Avocado Sandwich</h3>
+                        <div class="Price">R85</div>
+                        <button class="addCart" data-name="Bacon & Avocado Sandwich" data-price="85">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Item">
+                        <img src="lunch imgs/download7.jpeg" alt="Spaghetti Bolognese">
+                    </div>
+                    <div class="item-details">
+                        <h3>Spaghetti Bolognese</h3>
+                        <div class="Price">R105</div>
+                        <button class="addCart" data-name="Spaghetti Bolognese" data-price="105">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Item">
+                        <img src="lunch imgs/download8.jpeg" alt="Chicken Curry">
+                    </div>
+                    <div class="item-details">
+                        <h3>Chicken Curry & Rice</h3>
+                        <div class="Price">R125</div>
+                        <button class="addCart" data-name="Chicken Curry & Rice" data-price="125">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drinks Menu -->
+            <div class="menu_col">
+                <h2>Drinks</h2>
+                <div class="box">
+                    <div class="Item">
+                        <img src="drinks imgs/download12.jpeg" alt="House Draught Beer">
+                    </div>
+                    <div class="item-details">
+                        <h3>House Draught Beer (500ml)</h3>
+                        <div class="Price">R42</div>
+                        <button class="addCart" data-name="House Draught Beer (500ml)" data-price="42">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Item">
+                        <img src="drinks imgs/download13.jpeg" alt="Bottled Lager">
+                    </div>
+                    <div class="item-details">
+                        <h3>Bottled Lager (330ml)</h3>
+                        <div class="Price">R35</div>
+                        <button class="addCart" data-name="Bottled Lager (330ml)" data-price="35">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Item">
+                        <img src="drinks imgs/download14.jpeg" alt="House Wine">
+                    </div>
+                    <div class="item-details">
+                        <h3>Glass of House Wine (175ml)</h3>
+                        <div class="Price">R48</div>
+                        <button class="addCart" data-name="Glass of House Wine (175ml)" data-price="48">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Item">
+                        <img src="drinks imgs/download15.jpeg" alt="Fresh Orange Juice">
+                    </div>
+                    <div class="item-details">
+                        <h3>Fresh Orange Juice</h3>
+                        <div class="Price">R38</div>
+                        <button class="addCart" data-name="Fresh Orange Juice" data-price="38">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Item">
+                        <img src="drinks imgs/download16.jpeg" alt="Bottled Water">
+                    </div>
+                    <div class="item-details">
+                        <h3>Bottled Still Water (500ml)</h3>
+                        <div class="Price">R24</div>
+                        <button class="addCart" data-name="Bottled Still Water (500ml)" data-price="24">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Item">
+                        <img src="drinks imgs/download17.jpeg" alt="Soft Drink">
+                    </div>
+                    <div class="item-details">
+                        <h3>Soft Drink (Coke, Fanta, Sprite)</h3>
+                        <div class="Price">R28</div>
+                        <button class="addCart" data-name="Soft Drink (Coke, Fanta, Sprite)" data-price="28">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Item">
+                        <img src="drinks imgs/download18.jpeg" alt="House Wine">
+                    </div>
+                    <div class="item-details">
+                        <h3>House Wine (175ml glass)</h3>
+                        <div class="Price">R45</div>
+                        <button class="addCart" data-name="House Wine (175ml glass)" data-price="45">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="Item">
+                        <img src="drinks imgs/download19.jpeg" alt="Iced Tea">
+                    </div>
+                    <div class="item-details">
+                        <h3>Iced Tea (330ml)</h3>
+                        <div class="Price">R28</div>
+                        <button class="addCart" data-name="Iced Tea (330ml)" data-price="28">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart -->
+        <div class="cartTab">
+            <h1>Shopping Cart</h1>
+            <div class="listCart"></div>
+            <div class="cart-total">
+                <h3>Total: R<span id="cartTotal">0</span></h3>
+            </div>
+            <div class="btn">
+                <button class="close">CLOSE</button>
+                <button class="checkOut">CHECK OUT</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="count" id="countdown">
+        <img src="logo.webp" class="logo" alt="Gusto Grove & Dine Logo">
+        <div class="content2">
+            <h3>Special Coming Soon</h3>
+            <h1>Our <span>Full-course</span> Meal Experience</h1>
+            
+            <div class="launch-time">
+                <div>
+                    <p id="days">00</p>
+                    <span>Days</span>
+                </div>
+                <div>
+                    <p id="hours">00</p>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <p id="minutes">00</p>
+                    <span>Minutes</span>
+                </div>
+                <div>
+                    <p id="seconds">00</p>
+                    <span>Seconds</span>
+                </div>
+            </div>
+            <a href="#Main-Menu" class="btn">Explore Our Current Menu</a>
+        </div>
+        <img src="images/count.avif" class="service" alt="Fine Dining Service">
+    </section>
+
+<!-- Count Up Section -->
+<section class="count-up" id="count-up">
+    <div class="heading">
+        <span>Our Achievements</span>
+        <h3>Numbers That Make Us Proud</h3>
+    </div>
+    <div class="count-up-container">
+        <div class="count-item">
+            <div class="count-icon">
+                <i class="fas fa-utensils"></i>
+            </div>
+            <div class="count-number" data-target="12500">0</div>
+            <div class="count-label">Meals Served</div>
+        </div>
+        <div class="count-item">
+            <div class="count-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="count-number" data-target="8500">0</div>
+            <div class="count-label">Happy Customers</div>
+        </div>
+        <div class="count-item">
+            <div class="count-icon">
+                <i class="fas fa-calendar-alt"></i>
+            </div>
+            <div class="count-number" data-target="31">0</div>
+            <div class="count-label">Years of Excellence</div>
+        </div>
+        <div class="count-item">
+            <div class="count-icon">
+                <i class="fas fa-award"></i>
+            </div>
+            <div class="count-number" data-target="25">0</div>
+            <div class="count-label">Awards Won</div>
+        </div>
+    </div>
+</section>
+
+    <!-- Staff Section -->
+    <section class="Staff" id="Staff">
+        <div class="heading">
+            <span>Our Staff</span>
+            <h3>Our Staff Members</h3>
+        </div>
+        <div class="staff-container">
+            <div class="grid">
+                <div class="staff-card">
+                    <div class="card-img">
+                        <img src="Staff imgs/Chantell.jpg" alt="Chantell Malepe">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Chantell Malepe</h2>
+                        <h6 class="designation">FOUNDER</h6>
+                    </div>
+                </div>
+                <div class="staff-card">
+                    <div class="card-img">
+                        <img src="Staff imgs/Jose.jpg" alt="Jose Katie">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Jose Katie</h2>
+                        <h6 class="designation">HEAD MANAGER</h6>
+                    </div>
+                </div>
+                <div class="staff-card">
+                    <div class="card-img">
+                        <img src="Staff imgs/Nonjabulo.jpg" alt="Nonjabulo">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Nonjabulo</h2>
+                        <h6 class="designation">STAFF MANAGER</h6>
+                    </div>
+                </div>
+                <div class="staff-card">
+                    <div class="card-img">
+                        <img src="Staff imgs/Lesego.jpg" alt="Lesego Moatlhodi">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Lesego Moatlhodi</h2>
+                        <h6 class="designation">HEAD CHEF</h6>
+                    </div>
+                </div>
+                <div class="staff-card">
+                    <div class="card-img">
+                        <img src="Staff imgs/Lucky.jpg" alt="Lucky Sithole">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Lucky Sithole</h2>
+                        <h6 class="designation">CHAUFFEUR</h6>
+                    </div>
+                </div>
+                <div class="staff-card">
+                    <div class="card-img">
+                        <img src="Staff imgs/Brandon.jpg" alt="Brandon Peterson">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Brandon Peterson</h2>
+                        <h6 class="designation">TECHNICAL SUPPORTER</h6>
+                    </div>
+                </div>
+                <div class="staff-card">
+                    <div class="card-img">
+                        <img src="Staff imgs/Katlego.png" alt="Katlego">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Katlego</h2>
+                        <h6 class="designation">RECEPTIONIST</h6>
+                    </div>
+                </div>
+                <div class="staff-card">
+                    <div class="card-img">
+                        <img src="Staff imgs/Rocky.jpg" alt="Rocky Langa">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Rocky Langa</h2>
+                        <h6 class="designation">WAITER</h6>
+                    </div>
+                </div>
+                <div class="staff-card">
+                    <div class="card-img">
+                        <img src="Staff imgs/kutlwano.jpg" alt="Kutlwano">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Kutlwano</h2>
+                        <h6 class="designation">WAITER</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Review Section -->
+    <section class="Review" id="Review">
+        <div class="heading">
+            <span>Our Customer reviews</span>
+            <h3>Read more about our customers</h3>
+        </div>
+        <div class="container">
+            <div class="container_left">
+                <h1>Read what our customers love about us</h1>
+                <p>Welcome to "Gusto Grove & Dine", where flavour warmth and community come together to create unforgettable dining experiences.</p>
+                <p>Nestled in a comfortable, elegant setting, we celebrate the art of good made with passion and fresh, locally sourced ingredients. Whether you're joining us for a casual meal, a romantic evening, or a special celebration, Gusto Grove and Dine offers a menu that blends classic favorites with modern flair.</p>
+                <p>Our mission is simple-to bring people together through exceptional cuisine, inviting ambience, and genuine hospitality. At Gusto Grove & Dine, every meal is more than just food its a moment to savor</p>
+                <button class="btn">Read our success stories</button>
+            </div>
+            <div class="container_right">
+                <div class="card">
+                    <div class="card_container">
+                        <span><i class="fas fa-quote-left"></i></span>
+                        <div class="card_details">
+                            <p>I was recommended this restaurant by my cousin and the food and service there was wow. I Loved it so much</p>
+                            <h4>- Marnus Stephen</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_container">
+                        <span><i class="fas fa-quote-left"></i></span>
+                        <div class="card_details">
+                            <p>The view was something I have never seen before, woah</p>
+                            <h4>- Andrew Jackson</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_container">
+                        <span><i class="fas fa-quote-left"></i></span>
+                        <div class="card_details">
+                            <p>Went there with my boyfriend last summer and experience was amazing. This is a five star restaurant.</p>
+                            <h4>- Stacy Stone</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Us!</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Mobile Number">
+                <input type="text" placeholder="Email Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <section class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#Top-Menu">Top Menu</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#Main-Menu">Main Menu</a>
+                <a href="#Staff">Staff</a>
+                <a href="#Review">Review</a>
+            </section>
+
+            <section class="footer-socials">
+                <h3>Connect With Us</h3>
+                <div class="social-icons-container">
+                    <a class="social-icon" href="https://www.twitter.com/gustogrove" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="fb" href="https://www.facebook.com/profile.php?id=61582380687871" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a class="ig" href="https://www.instagram.com/gusto_grove" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="li" href="https://www.linkedin.com/in/gusto-grove-b8078038a" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </section>
+
+            <section class="footer-info">
+                <h3>Location & Hours</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Delicious Street, Ocean View</p>
+                <p><i class="fas fa-clock"></i> Mon - Fri: 8AM - 10PM</p>
+                <p><i class="fas fa-clock"></i> Sat - Sun: 9AM - 11PM</p>
+                <p><i class="fas fa-envelope"></i> GustoGrove&Dine@gmail.com</p>
+            </section>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 Gusto Grove And Dine. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

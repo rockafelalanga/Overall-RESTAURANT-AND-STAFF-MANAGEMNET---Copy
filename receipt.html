@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - Gusto Grove & Dine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/Aura.css">
+    <style>
+        .confirmation-container {
+            max-width: 800px;
+            margin: 100px auto 50px;
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .success-icon {
+            font-size: 8rem;
+            color: #28a745;
+            margin-bottom: 2rem;
+        }
+        
+        .confirmation-title {
+            font-size: 3.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+        
+        .confirmation-subtitle {
+            font-size: 2rem;
+            color: var(--light-text);
+            margin-bottom: 3rem;
+        }
+        
+        .order-details {
+            background: var(--second-bg-color);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: left;
+        }
+        
+        .detail-section {
+            margin-bottom: 2rem;
+        }
+        
+        .detail-section h3 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .detail-item:last-child {
+            border-bottom: none;
+        }
+        
+        .item-name {
+            font-size: 1.6rem;
+            color: var(--dark-color);
+        }
+        
+        .item-price {
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .total-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .total-amount {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        
+        .delivery-info {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            margin: 1rem 0;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn-print {
+            background: var(--secondary-color);
+        }
+        
+        .btn-home {
+            background: var(--dark-color);
+        }
+        
+        @media print {
+            .action-buttons {
+                display: none;
+            }
+            
+            .confirmation-container {
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <a href="index.html" class="logo">Gusto Grove & Dine</a>
+        <nav class="navbar">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Confirmation Section -->
+    <section class="confirmation-section">
+        <div class="confirmation-container">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            
+            <h1 class="confirmation-title">Order Confirmed!</h1>
+            <p class="confirmation-subtitle">Thank you for your order at Gusto Grove & Dine</p>
+            
+            <!-- Order Details -->
+            <div class="order-details">
+                <div class="detail-section">
+                    <h3>Order Information</h3>
+                    <div class="detail-item">
+                        <span class="item-name">Order Number</span>
+                        <span class="item-price" id="orderNumber">-</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="item-name">Order Date & Time</span>
+                        <span class="item-price" id="orderDate">-</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="item-name">Estimated Delivery</span>
+                        <span class="item-price" id="deliveryTime">30-45 minutes</span>
+                    </div>
+                </div>
+                
+                <div class="detail-section">
+                    <h3>Order Items</h3>
+                    <div id="receiptItems"></div>
+                </div>
+                
+                <div class="total-section">
+                    <div class="detail-item">
+                        <span class="item-name" style="color: white;">Total Amount</span>
+                        <span class="total-amount" id="receiptTotal">R0</span>
+                    </div>
+                </div>
+                
+                <div class="detail-section">
+                    <h3>Delivery Information</h3>
+                    <div class="delivery-info">
+                        <div id="deliveryAddress"></div>
+                    </div>
+                </div>
+                
+                <div class="detail-section">
+                    <h3>Payment Information</h3>
+                    <div class="detail-item">
+                        <span class="item-name">Payment Method</span>
+                        <span class="item-price">Credit Card ending in <span id="cardLastFour">----</span></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="item-name">Payment Status</span>
+                        <span class="item-price" style="color: #28a745;">Paid</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="thank-you-message" style="margin: 2rem 0;">
+                <h3 style="color: var(--primary-color); font-size: 2.2rem; margin-bottom: 1rem;">Thank You for Choosing Gusto Grove & Dine!</h3>
+                <p style="font-size: 1.6rem; color: var(--light-text); line-height: 1.6;">
+                    Your order is being prepared with care. You will receive a confirmation email shortly. 
+                    For any questions about your order, please call us at <strong>011 123 4567</strong>.
+                </p>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn btn-print" onclick="window.print()">
+                    <i class="fas fa-print"></i> Print Receipt
+                </button>
+                <a href="index.html" class="btn btn-home">
+                    <i class="fas fa-home"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const orderData = JSON.parse(localStorage.getItem('currentOrder'));
+            const deliveryInfo = JSON.parse(localStorage.getItem('deliveryInfo'));
+            
+            if (!orderData) {
+                window.location.href = 'index.html';
+                return;
+            }
+            
+            // Populate order information
+            document.getElementById('orderNumber').textContent = orderData.orderNumber;
+            document.getElementById('orderDate').textContent = orderData.orderDate;
+            document.getElementById('receiptTotal').textContent = 'R' + orderData.total;
+            document.getElementById('cardLastFour').textContent = orderData.payment.cardLastFour;
+            
+            // Populate order items
+            const receiptItems = document.getElementById('receiptItems');
+            orderData.items.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                const itemElement = document.createElement('div');
+                itemElement.className = 'detail-item';
+                itemElement.innerHTML = `
+                    <div>
+                        <span class="item-name">${item.name} × ${item.quantity}</span>
+                    </div>
+                    <span class="item-price">R${itemTotal}</span>
+                `;
+                receiptItems.appendChild(itemElement);
+            });
+            
+            // Populate delivery information
+            if (deliveryInfo) {
+                const deliveryAddress = document.getElementById('deliveryAddress');
+                deliveryAddress.innerHTML = `
+                    <p style="font-size: 1.6rem; margin-bottom: 0.5rem;"><strong>${deliveryInfo.name}</strong></p>
+                    <p style="font-size: 1.4rem; color: var(--light-text); margin-bottom: 0.5rem;">
+                        ${deliveryInfo.street}${deliveryInfo.apartment ? ', ' + deliveryInfo.apartment : ''}<br>
+                        ${deliveryInfo.city}, ${deliveryInfo.province} ${deliveryInfo.postalCode}
+                    </p>
+                    <p style="font-size: 1.4rem; color: var(--light-text);">
+                        <i class="fas fa-phone" style="color: var(--primary-color);"></i> ${deliveryInfo.phone}<br>
+                        <i class="fas fa-envelope" style="color: var(--primary-color);"></i> ${deliveryInfo.email}
+                    </p>
+                `;
+                
+                // Update delivery time based on selection
+                if (deliveryInfo.deliveryTime === 'asap') {
+                    document.getElementById('deliveryTime').textContent = '25-40 minutes';
+                } else if (deliveryInfo.deliveryTime === '30min') {
+                    document.getElementById('deliveryTime').textContent = '30-45 minutes';
+                } else if (deliveryInfo.deliveryTime === '1hour') {
+                    document.getElementById('deliveryTime').textContent = '55-70 minutes';
+                } else if (deliveryInfo.deliveryTime === '2hours') {
+                    document.getElementById('deliveryTime').textContent = '1 hour 50 minutes - 2 hours 10 minutes';
+                }
+            }
+            
+            // Clear order data after displaying (optional)
+            // localStorage.removeItem('currentOrder');
+            // localStorage.removeItem('deliveryInfo');
+        });
+    </script>
+</body>
+</html>
